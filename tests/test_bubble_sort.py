@@ -1,6 +1,14 @@
-from sort import bubble_sort
+import unittest
+from sort.bubble_sort import bubble_sort
 
-arr = [23,9,17,5,13,3,21,11,25,7,20,14,6,26,2,10,15,1,24,8]
+class TestBubbleSort(unittest.TestCase):
+    def test_bubble(self):
+        arr = [0, 50, 7, 34, 66, 85]
+        print('this is the unsorted list:')
+        print(arr)
+        result = bubble_sort.bubble_sort(arr)
+        print('this is the (bubble) sorted list:')
+        print(result)
 
-result = bubble_sort(arr)
-print(result)
+if __name__ == "__main__":
+    unittest.main()
